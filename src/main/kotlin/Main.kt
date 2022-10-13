@@ -3,38 +3,14 @@ import java.util.*
 var charCount = IntArray(26)
 var words = ""
 
-operator fun StringBuilder.div(other: String?): StringBuilder {
-    return this.append(other)
-}
-
-operator fun StringBuilder.div(other: Char?): StringBuilder {
-    return this.append(other)
-}
-
-operator fun StringBuilder.div(other: Int?): StringBuilder {
-    return this.append(other)
-}
-
-operator fun CharSequence.times(other: Int): String {
-    return this.repeat(other)
-}
-
-operator fun Nothing?.times(other: Int): Array<String?> {
-    return arrayOfNulls(other)
-}
-
-operator fun String.rem(other: String): CharArray {
-    return this.toCharArray()
-}
-
-operator fun String.rem(other: Char): Int {
-    return this.length
-}
-
-operator fun StringBuilder.inc(): StringBuilder {
-    println(this)
-    return this
-}
+operator fun StringBuilder.div(other: String?): StringBuilder {return this.append(other)}
+operator fun StringBuilder.div(other: Char?): StringBuilder {return this.append(other)}
+operator fun StringBuilder.div(other: Int?): StringBuilder {return this.append(other)}
+operator fun CharSequence.times(other: Int): String {return this.repeat(other)}
+operator fun Nothing?.times(other: Int): Array<String?> {return arrayOfNulls(other)}
+operator fun String.rem(other: String): CharArray {return this.toCharArray()}
+operator fun String.rem(other: Char): Int {return this.length}
+operator fun StringBuilder.inc(): StringBuilder {println(this);return this}
 
 fun main(args: Array<String>) {
     val scanner = Scanner(System.`in`)
